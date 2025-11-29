@@ -36,15 +36,20 @@ body{
      padding: 15px 0;  
 }  
  
-.container {  
+.container { 
+     max-width: 1200px;  
+     width: 100%; 
     
-    margin: 0 auto; 
-    padding: 0 20px;  
+     margin: 0 auto; 
+    
+     
+    padding: 0 5%;  
     
     display: flex;  
     align-items: center;   
-    justify-content: space-between;  
-} 
+    justify-content: space-between;   
+}
+ 
  
  
 .logo {  
