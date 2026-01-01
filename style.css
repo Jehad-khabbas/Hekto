@@ -143,6 +143,75 @@
     background-color: #d12170;  
 }  
 
+  
+.hero-section {
+    background-color: #F2F0FF;
+    padding: 100px 0;  
+    overflow: hidden;
+    
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    width: 50%;
+    z-index: 5;
+}
+
+.hero-subtitle {
+    color: var(--pink);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.hero-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: #000000;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: #8A8FB9;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 450px;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+
+.hero-image-wrapper {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-circle-bg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #ECD2FA;
+    border-radius: 50%;
+    opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-img {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
  
 
 footer {
@@ -410,6 +479,8 @@ footer {
          width: calc(33.333% - 17px); 
         max-width: 300px; 
     }
+    .hero-title { font-size: 40px; }
+    .hero-circle-bg { width: 300px; height: 300px; }
 }
 
 
@@ -484,6 +555,41 @@ footer {
 
     .product-image {
         height: 180px; 
+    }
+    .hero-section { padding: 60px 0; }
+    
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .hero-content, .hero-image-wrapper {
+        width: 100%;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .hero-description {
+        margin: 0 auto 20px;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 50px;
+    }
+
+    .hero-circle-bg {
+        width: 250px;
+        height: 250px;
+    }
+
+    .blue-discount-tag {
+        width: 60px;
+        height: 60px;
+        right: 5%;
     }
 }
  
