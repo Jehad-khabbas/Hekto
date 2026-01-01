@@ -400,6 +400,72 @@ footer {
     overflow: hidden;
     
  }
+  .view-details-btn {
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #08D15F;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+
+.hover-icons-top {
+    position: absolute;
+    top: 15px;
+    left: -100px; 
+    display: flex;
+    gap: 10px;
+    transition: 0.4s;
+}
+
+.hover-icons-top i {
+    color: #3671ac;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+.product-item:hover .view-details-btn {
+    bottom: 15px;  
+    opacity: 1;
+}
+
+.product-item:hover .hover-icons-top {
+    left: 15px;  
+}
+
+ 
+.product-item:hover .product-details {
+    background-color: #2F1AC4;  
+    transition: 0.3s;
+}
+
+.product-item:hover .product-details h3,
+.product-item:hover .product-details .product-code,
+.product-item:hover .product-details .product-price {
+    color: #FFFFFF !important; 
+}
+
+
+.product-item:hover .color-btn {
+    border-color: #fff;
+}
+
+
+.product-details {
+    transition: 0.3s ease-in-out;
+}
+
 
  .product-image {
     background-color: var(--image-bg-color);
@@ -409,6 +475,7 @@ footer {
     display: flex;
     align-items: center; 
     justify-content: center; 
+    overflow: hidden;
 }
 
 .product-image img {
@@ -465,6 +532,144 @@ footer {
 .color-btn.light-green { background-color: var(--color-light-green); }
 
 
+.latest-products {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.latest-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.latest-tabs li {
+  font-size: 16px;
+  cursor: pointer;
+  color: #151875;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: color 0.3s ease;
+
+}
+
+.latest-tabs li:hover {
+  color: var(--pink);
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.latest-item {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.latest-item:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+.latest-img {
+  background-color: #F7F7F7;
+  padding: 30px;
+  height: 260px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.latest-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.latest-item:hover img {
+  transform: scale(1.05);
+}
+
+ 
+
+
+.hover-icons {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.latest-item:hover .hover-icons {
+  opacity: 1;
+}
+
+.hover-icons i {
+  width: 35px;
+  height: 35px;
+  background-color: #EEEFFB;
+  color: #151875;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hover-icons i:hover {
+  background-color: var(--pink);
+  color: #fff;
+}
+
+
+.latest-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.latest-info h3 {
+  font-size: 16px;
+  color: #151875;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.price {
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.price .new {
+  color: #151875;
+  font-weight: 600;
+  margin-right: 8px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.price .old {
+  color: var(--pink);
+  text-decoration: line-through;
+}
  
 @media (min-width: 760px) and (max-width: 1024px) {
      
@@ -481,6 +686,7 @@ footer {
     }
     .hero-title { font-size: 40px; }
     .hero-circle-bg { width: 300px; height: 300px; }
+    .latest-grid {grid-template-columns: repeat(2, 1fr);}
 }
 
 
@@ -591,5 +797,17 @@ footer {
         height: 60px;
         right: 5%;
     }
+    .latest-grid { grid-template-columns: 1fr; }  
+    .filter-nav { gap: 15px; flex-wrap: wrap; }
+    .filter-nav li a { font-size: 14px; }
+    .latest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .latest-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
 }
  
