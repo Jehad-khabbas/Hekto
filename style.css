@@ -803,6 +803,113 @@ footer {
   font-size: 14px;
 }
 
+
+.top-categories {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.top-categories .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1A0B5B;
+  margin-bottom: 60px;
+  
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  
+}
+
+.category-card {
+  width: 200px;
+  cursor: pointer;
+}
+
+.category-circle {
+  width: 200px;
+  height: 200px;
+  background: #F6F7FB;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.category-circle img {
+  max-width: 120px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.view-btn {
+  position: absolute;
+  bottom: 20px;
+  background-color: #08D15F;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s ease;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.category-circle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -12px 4px 0 0 #9574e5,
+              0 0 40px rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover .category-circle::before {
+  opacity: 1;
+}
+
+.category-card:hover .view-btn {
+  opacity: 1;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card h4 {
+  margin-top: 18px;
+  font-size: 16px;
+  color: #151875;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.category-card span {
+  font-size: 14px;
+  color: #8A8FB9;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+.category-card:hover .category-circle {
+  box-shadow:
+    -12px 4px 0 0 #9574e5,
+    0 0 40px rgba(255, 255, 255, 0.5);
+}
+
  
 @media (min-width: 760px) and (max-width: 1024px) {
      
@@ -822,6 +929,9 @@ footer {
     .latest-grid {grid-template-columns: repeat(2, 1fr);}
     .offer-grid {grid-template-columns: repeat(2, 1fr); }
     .trending-grid {grid-template-columns: repeat(2, 1fr);}
+    .categories-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }
 
@@ -943,6 +1053,9 @@ footer {
   .latest-info {flex-direction: column;gap: 8px;}
   .offer-grid {grid-template-columns: 1fr;}
    .trending-grid {grid-template-columns: 1fr;}
+   .categories-list {
+    grid-template-columns: 1fr;
+  }
 
 }
  
