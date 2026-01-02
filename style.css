@@ -670,6 +670,71 @@ footer {
   color: var(--pink);
   text-decoration: line-through;
 }
+
+.shopex-offer {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.offer-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #151875;
+  margin-bottom: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.offer-card {
+  background-color: #fff;
+  padding: 45px 25px;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+ 
+.offer-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+ 
+.offer-card h3 {
+  font-size: 18px;
+  color: #151875;
+  margin-bottom: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.offer-card p {
+  font-size: 14px;
+  color: #8A8FB9;
+  line-height: 1.7;
+}
+
  
 @media (min-width: 760px) and (max-width: 1024px) {
      
@@ -687,6 +752,7 @@ footer {
     .hero-title { font-size: 40px; }
     .hero-circle-bg { width: 300px; height: 300px; }
     .latest-grid {grid-template-columns: repeat(2, 1fr);}
+    .offer-grid {grid-template-columns: repeat(2, 1fr); }
 }
 
 
@@ -807,6 +873,9 @@ footer {
   .latest-info {
     flex-direction: column;
     gap: 8px;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
   }
 
 }
