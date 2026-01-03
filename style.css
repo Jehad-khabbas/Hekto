@@ -732,6 +732,7 @@ footer {
   line-height: 1.7;
 }
 
+ 
 .trending-products {
   max-width: 1200px;
   margin: 120px auto;
@@ -803,6 +804,7 @@ footer {
   font-size: 14px;
 }
 
+/* ========= */
 
 .top-categories {
   padding: 80px 20px;
@@ -910,6 +912,132 @@ footer {
     0 0 40px rgba(255, 255, 255, 0.5);
 }
 
+.latest-blog {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: block; 
+  
+}
+.blog-meta .author i{
+    color: #FB2E86;
+    margin-right: 5px;
+}
+.blog-meta .date i{
+    color:#FFA454;
+    margin-right: 5px;
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1b1f8a;
+  margin-bottom: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.blog-image {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-content {
+  padding: 25px;
+  
+}
+
+.blog-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  
+}
+
+.author {
+  color: #1b1f8a; 
+  position: relative;
+  padding-left: 15px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.author::before {
+  position: absolute;
+  left: 0;
+  font-size: 10px;
+}
+
+.date {
+  color: #1b1f8a;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.blog-title {
+  font-size: 18px;
+  color: #1b1f8a;
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-family: 'Josefin Sans', sans-serif;
+  
+}
+
+.blog-card p {
+  font-size: 15px;
+  color: #8a8fb9; 
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.read-more {
+  font-size: 16px;
+  color: #1b1f8a;
+  font-weight: 600;
+  text-decoration: underline; 
+  transition: color 0.3s ease;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.blog-card:hover .blog-title,
+.blog-card:hover .read-more {
+  color: #fb2e86; }
+
+
  
 @media (min-width: 760px) and (max-width: 1024px) {
      
@@ -936,7 +1064,6 @@ footer {
 }
 
 
- 
 @media (max-width: 759px) {
      
     .container { padding: 0 20px; }
